@@ -1,0 +1,30 @@
+<div id="title">
+  <h1>Customer Filtering Tool: Sort</h1>
+</div>
+<div id="to-search">
+  <button [routerLink]="['/customers/search']" routerLinkActive="router-link-active">Go to Search</button>
+</div>
+<div id="sort-component" class="table-display">
+  <div id="sort-input">
+    <label for="sortOptions">Sort by: </label>
+    <select #sortOptions [(ngModel)]="sortOption" id="dropdown" (change)="sort(sortOption)">
+      <option *ngFor="let option of availableOptions" [ngValue]="option">{{option.displayName}}</option>
+    </select>
+  </div>
+  <table class="sort-result">
+    <thead class="table-title">
+        <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Company Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers$ | async">
+        <td class="name">{{customer.firstName}}</td>
+        <td class="name">{{customer.lastName}}</td>
+        <td class="name">{{customer.companyName}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

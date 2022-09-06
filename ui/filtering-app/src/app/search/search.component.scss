@@ -1,0 +1,86 @@
+$table-title-color: #ffffff;
+$table-title-background-color: #2f2f2f;
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #e4e4e4;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-title {
+  color: $table-title-color;
+  background-color: $table-title-background-color;
+  padding: 15px;
+  h2 {
+    padding: 0;
+  }
+}
+
+label {
+  margin-left: 20px;
+  text-align: left;
+}
+
+input {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+#search-input {
+  float: right;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 5px 25px 5px 25px;
+  font-size: 0.95em;
+  font-family: "Open Sans";
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+th, td {
+  padding: 12px 15px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+#search-component {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 25px;
+  margin-left: auto;
+}
+
+#to-search {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}

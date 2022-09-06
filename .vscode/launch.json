@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Util",
+            "request": "launch",
+            "mainClass": "com.mmontag.newrelic.filteringapp.services.db.Util",
+            "projectName": "filtering-app"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-FilteringAppApplication<filtering-app>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.mmontag.newrelic.filteringapp.FilteringAppApplication",
+            "projectName": "filtering-app",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+<div id="title">
+  <h1>Customer Filtering Tool: Search</h1>
+</div>
+<div id="to-search">
+  <button [routerLink]="['/customers/sort']" routerLinkActive="router-link-active">Go to Sort</button>
+</div>
+<div id="search-component" class="table-display">
+  <div id="search-input">
+    <label for="search-box">Search by First/Last Name: </label>
+    <input #searchBox [(ngModel)]="term" id="search-box" (input)="search(searchBox.value)" />
+  </div>
+  <table class="search-result">
+    <thead class="table-title">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Company Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers$ | async">
+        <td class="name">{{customer.firstName}}</td>
+        <td class="name">{{customer.lastName}}</td>
+        <td class="name">{{customer.companyName}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
