@@ -1,4 +1,5 @@
 # NR Take-Home Exercise - Filtering App
+#### Matt Montag
 
 - [Overview](#overview)
 - [Tech Stack](#tech-stack)
