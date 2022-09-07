@@ -11,10 +11,10 @@
 This application does two simple things: sorts and searches a "customers" dataset. Users are able to navigate to either the sort page or the search page within a browser, where they can interact with inputs to alter their view of the data.
 
 ### Search
-When navigating to the search page (http://localhost:3000/customers/search), the user is presented with an unfiltered view of (some of) the data, along with a text box.  Whenever (with a slight buffer) the user enters a letter, the frontend sends the current value of the textbox to the backend, which queries the database for customers whose first OR last name contains the input as a substring, ignoring case.  In addition to updating the view of the data, each letter entered (or deleted) by the user is reflected within the URL as a query parameter. These query parameters are evaluated (and inserted into the search bar) on page load, allowing URLs to be copy/pasted, shared and re-visited.
+When navigating to the search page (http://localhost:3000/customers/search), the user is presented with an unfiltered view of (some of) the data, along with a text box.  Whenever (with a slight buffer) the user enters a letter, the frontend sends the current value of the textbox to the backend, which queries the database for customers whose first OR last name contains the input as a substring, ignoring case.  In addition to updating the view of the data, each letter entered (or deleted) by the user is reflected within the URL as a query parameter. These query parameters are evaluated (and inserted into the textbox) on page load, allowing URLs to be copy/pasted, shared and re-visited.
 
 ### Sort
-When navigating to the sort page, the user is presented with a similar table.  However, they now have a dropdown available, rather than a textbox.  The dropdown contains six possible sorting opt+ions, one for each (useful -- i.e., non-`id`) field and sort direction:
+When navigating to the sort page, the user is presented with a similar table.  However, they now have a dropdown available, rather than a textbox.  The dropdown contains six possible sorting options, one for each (useful -- i.e., non-`id`) field and sort direction:
 1. First Name, Ascending
 2. First Name, Descending
 3. Last Name, Ascending
